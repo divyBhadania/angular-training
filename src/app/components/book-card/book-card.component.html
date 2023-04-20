@@ -1,7 +1,10 @@
 <div class="card">
   <img class="card-img-top" [src]="card.img" alt="Card image cap" />
   <div class="card-body">
-    <h5 class="card-title">{{card.title}}</h5>
-    <p class="card-text">{{card.text}}</p>
+    <h5 class="card-title">{{ card.title }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">by {{ card.author }}</h6>
+    <p class="card-text">{{ card.text }}</p>
+    <div class="card-text d-inline-block">{{ card.price }}$</div>
+    <a href="#" class="btn btn-primary d-inline-block">Buy Now</a>
   </div>
 </div>
