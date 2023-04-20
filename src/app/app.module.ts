@@ -1,29 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { FormsModule } from '@angular/forms';
-import { BookCardComponent } from './components/book-card/book-card.component';
-import { MainComponent } from './components/main/main.component';
-import { SidebarComponent } from './components/sidebar/sidebar.component';
+//module
+import { CommonErrorModuleModule } from './common-error/common-error.module';
 
+//component
+import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
+
+//service
+import { AlertService } from './common-error/alert.service';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    BookCardComponent,
-    MainComponent,
-    SidebarComponent,
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    CoreModule,
+    CommonErrorModuleModule
   ],
-  providers: [],
+  providers: [AlertService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
