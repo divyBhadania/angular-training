@@ -1,7 +1,14 @@
 <footer>
-        <input type="email" name="email" [value]="email" id="" placeholder="To subscribe put your email here" [(ngModel)] = "email">
-        <button type="button" class="subscribe-button">subscribe</button>
-    <p>Hello {{email}}</p>
-    <hr>
-    <p>&copy; 2023 BookShop.com, Inc. all rights reserved.</p>
+  <input
+    type="email"
+    name="email"
+    [value]="email"
+    id=""
+    placeholder="To subscribe put your email here"
+    [(ngModel)]="email"
+  />
+  <button type="button" class="subscribe-button">subscribe</button>
+  <p>Hello {{ email }}</p>
+  <hr />
+  <p>&copy; {{ date }} BookShop.com, Inc. all rights reserved.</p>
 </footer>

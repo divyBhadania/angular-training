@@ -21,6 +21,7 @@ nav{
 .search-box {
   display: flex;
   align-items: center;
+  width: 60%;
 }
 
 .input-search {
@@ -28,7 +29,7 @@ nav{
   all: unset;
   margin-left: 30px;
   height: 30px;
-  width: 800px;
+  width: 100%;
   padding: 10px;
   background-color: $grey-color;
   border-radius: 10px;
@@ -44,7 +45,7 @@ nav{
 .user-account {
   display: flex;
   gap: 10px;
-  font-size: 25px;
+  font-size: 20px;
   align-items: center;
   background-color: $primary-color;
   color: $white-color;
@@ -54,8 +55,12 @@ nav{
   box-shadow: 0 5px 30px $primary-color;
 }
 
+.user-account p {
+  margin-bottom: 0px;
+}
+
 .account-icon {
-  font-size: 30px !important;
+  font-size: 25px !important;
 }
 
 ul {
