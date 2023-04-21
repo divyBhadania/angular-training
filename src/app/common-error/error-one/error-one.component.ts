@@ -8,8 +8,14 @@ import { AlertService } from '../alert.service';
 })
 export class ErrorOneComponent {
   constructor(private alertService: AlertService) {}
+  userName :string = "";
+  nameList : string[] = [];
+  addName() : void{
+    this.nameList.push(this.userName);
+  }
 
-  showAlert() {
-    this.alertService.showAlert();
+  deleteName(index : number) : void {
+    this.alertService.showAlert(this.nameList[index]);
+    this.nameList.splice(index , 1);
   }
 }

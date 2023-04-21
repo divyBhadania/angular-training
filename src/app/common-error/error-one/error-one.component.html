@@ -1,2 +1,12 @@
-<p>error-one works!</p>
-<button (click)="showAlert()">Alert</button>
+<form>
+  <input type="text" name="username" [(ngModel)]="userName" />
+  <button (click)="addName()">add Name</button>
+</form>
+
+<ng-container *ngFor="let name of nameList ; let index = index">
+  <p>{{name}} <button (click)="deleteName(index)" >delete</button></p>
+</ng-container>
+
+
+<app-error-two></app-error-two>
+<app-error-three></app-error-three>
