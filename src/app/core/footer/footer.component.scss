@@ -3,9 +3,14 @@
 footer{
     width: 100%;
     height: fit-content;
-    background-color: $primary-color;
+    background: $primary-color no-repeat padding-box;;
     color: $white-color;
     padding-block: 20px;
+    opacity: 1;
+    background-image: url("https://raw.githubusercontent.com/divyBhadania/BackForceWebsite/cc72e60e20eaac6391e8913f2a6712a9c9dc9a6e/assest/Vector%20Smart%20Object.svg");
+    background-size: 1023px 523px;
+    background-position: center;
+    padding-inline: 10%;
 }
 
 input{
@@ -15,13 +20,13 @@ input{
     width: 30%;
     height: 20px;
     padding: 10px;
-    margin-left: 50px;
     color: black;
 }
 
-footer p{
-    margin-left: 50px;
-    margin-block: 20px;
+
+footer .copy-right{
+  margin-inline: auto;
+  width: fit-content;
 }
 
 .subscribe-button {
@@ -62,4 +67,30 @@ footer p{
 .subscribe-button:hover {
   background: #F6F9FE;
   color: $primary-color;
+}
+
+.country-logo{
+  height: 50px;
+}
+
+.county{
+  width: 150px;
+}
+
+.office-address{
+  display: flex;
+  justify-content: space-around;
+}
+
+.footer-link{
+  // width: 30%;
+  justify-content: space-between;
+
+  img{
+    height: 50px;
+  }
+
+  .social{
+    justify-self: end;
+  }
 }

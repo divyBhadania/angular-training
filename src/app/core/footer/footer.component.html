@@ -9,6 +9,25 @@
   />
   <button type="button" class="subscribe-button">subscribe</button>
   <p>Hello {{ email }}</p>
+  <div class="office-address d-flex justify-content-between" >
+  <ng-container *ngFor="let address of addressList">
+    <div class="county">
+      <div class="d-flex justify-content-between align-items-center">
+        <img class="country-logo" [src]="address.img" alt="" />
+        <div class="name">{{ address.country }}</div>
+      </div>
+      <div class="address">{{ address.address }}</div>
+    </div>
+    </ng-container>
+  </div>
   <hr />
-  <p>&copy; {{ date }} BookShop.com, Inc. all rights reserved.</p>
+  <div class="footer-link d-flex">
+    <div *ngFor="let link of footerLinkList">{{link}}</div>
+    <div class="social">
+      <img src="https://raw.githubusercontent.com/Iconscout/unicons/691ff29fd130557a2ce7d991cef24bcd6644ad44/svg/line/facebook-f.svg" alt="">
+      <img src="https://raw.githubusercontent.com/Iconscout/unicons/691ff29fd130557a2ce7d991cef24bcd6644ad44/svg/line/instagram.svg" alt="">
+      <img src="https://raw.githubusercontent.com/Iconscout/unicons/691ff29fd130557a2ce7d991cef24bcd6644ad44/svg/line/twitter.svg" alt="">
+    </div>
+  </div>
+  <p class="copy-right">&copy; {{ date }} BookShop.com, Inc. all rights reserved.</p>
 </footer>
