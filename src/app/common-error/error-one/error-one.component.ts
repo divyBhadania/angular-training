@@ -15,7 +15,8 @@ export class ErrorOneComponent {
   }
 
   deleteName(index : number) : void {
-    this.alertService.showAlert(this.nameList[index]);
-    this.nameList.splice(index , 1);
+    if(this.alertService.showAlert(this.nameList[index])){
+      this.nameList.splice(index , 1);
+    }
   }
 }

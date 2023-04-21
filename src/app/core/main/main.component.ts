@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IBookList } from '../interface/IBookList';
 
 @Component({
   selector: 'app-main',
@@ -6,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent {
-  public cards = [
+  public cards : IBookList[] = [
     {
       title: "Harry Potter and the Philosopher's Stone",
       author: 'JKRowling',
