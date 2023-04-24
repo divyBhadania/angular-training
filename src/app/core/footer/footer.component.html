@@ -10,13 +10,13 @@
   <button type="button" class="subscribe-button">subscribe</button>
   <p>Hello {{ email }}</p>
   <div class="office-address d-flex justify-content-between">
-    <ng-container *ngFor="let address of addressList">
+    <ng-container *ngFor="let addressInfo of addressList">
       <div class="county">
         <div class="d-flex justify-content-between align-items-center">
-          <img class="country-logo" [src]="address.img" alt="" />
-          <div class="name">{{ address.country }}</div>
+          <img class="country-logo" [src]="addressInfo.img" alt="" />
+          <div class="name">{{ addressInfo.country }}</div>
         </div>
-        <div class="address">{{ address.address }}</div>
+        <div class="address">{{ addressInfo.address }}</div>
       </div>
     </ng-container>
   </div>

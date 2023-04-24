@@ -12,15 +12,9 @@ import { CoreModule } from './core/core.module';
 import { AlertService } from './common-error/alert.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-  ],
-  imports: [
-    BrowserModule,
-    CoreModule,
-    CommonErrorModuleModule
-  ],
+  declarations: [AppComponent],
+  imports: [BrowserModule, CoreModule, CommonErrorModuleModule],
   providers: [AlertService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

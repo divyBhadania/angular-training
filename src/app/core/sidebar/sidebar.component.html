@@ -1,17 +1,16 @@
 <div class="sidebar">
   <div class="filter-section">
     <p>Author Name</p>
-    <div class="filter">
-        <input type="checkbox" id="JKRowling" name="JKRowling" value="JKRowling" />
-        <label for="JKRowling">JKRowling</label>
-    </div>
-    <div class="filter">
-        <input type="checkbox" id="WilliamShakespeare" name="WilliamShakespeare" value="WilliamShakespeare" />
-        <label for="WilliamShakespeare">William Shakespeare</label>
-    </div>
-    <div class="filter">
-        <input type="checkbox" id="JamesJoyce" name="JamesJoyce" value="JamesJoyce" />
-        <label for="JamesJoyce">James Joyce</label>
+    <div class="filter" *ngFor="let author of authorFilter; let ind = index">
+      <input
+        type="checkbox"
+        [id]="author.name"
+        [name]="author.name"
+        [value]="author.name"
+        [checked]="author.check"
+        (change)="changeFilter(ind)"
+      />
+      <label for="JKRowling">{{ author.label }}</label>
     </div>
   </div>
 </div>
