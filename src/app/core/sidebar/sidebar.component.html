@@ -10,7 +10,7 @@
         [checked]="author.check"
         (change)="changeFilter(ind)"
       />
-      <label for="JKRowling">{{ author.label }}</label>
+      <label [for]="author.name">{{ author.label }}</label>
     </div>
   </div>
 </div>

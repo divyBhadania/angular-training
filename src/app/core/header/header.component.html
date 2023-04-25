@@ -1,19 +1,31 @@
 <header>
-    <nav>
-        <div class="header">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe7A987fReP8ryWhuohDwXKlAkL1e7roGpZScOB5UNsupbsvAqPBTfqu_PyTp08eWOyg&usqp=CAU" alt="" class="logo">
-        </div>
-        <div class="search-box">
-            <input type="text" name="" placeholder="Search here ..." id="" class="input-search">
-            <i class="material-symbols-outlined search-icon">search</i>
-        </div>
-        <i class="material-symbols-outlined">space_dashboard</i>
-        <div class="user-account">
-            <i class="material-symbols-outlined account-icon">account_circle</i>
-            <p>My Account</p>
-        </div>
-    </nav>
-    <ul>
-        <li *ngFor="let list of navLinkList">{{list}}</li>
-    </ul>
+  <nav>
+    <div class="header">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSe7A987fReP8ryWhuohDwXKlAkL1e7roGpZScOB5UNsupbsvAqPBTfqu_PyTp08eWOyg&usqp=CAU"
+        alt=""
+        class="logo"
+      />
+    </div>
+    <div class="search-box">
+      <input
+        type="text"
+        name=""
+        placeholder="Search here ..."
+        id=""
+        class="input-search"
+      />
+      <i class="material-symbols-outlined search-icon">search</i>
+    </div>
+    <i class="material-symbols-outlined">space_dashboard</i>
+    <div class="user-account">
+      <i class="material-symbols-outlined account-icon">account_circle</i>
+      <p>My Account</p>
+    </div>
+  </nav>
+  <ul>
+    <li *ngFor="let list of navLinkList">
+      <a>{{ list.tiltle }}</a>
+    </li>
+  </ul>
 </header>

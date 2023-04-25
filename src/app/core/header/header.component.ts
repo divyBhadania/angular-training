@@ -7,11 +7,11 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   public navLinkList = [
-    'Dashboard',
-    "Today's Deal",
-    'Mobile',
-    'Electronics',
-    'Customer service',
-    'About',
+    { tiltle: 'Dashboard', link: '#' },
+    { tiltle: "Today's Deal", link: '#' },
+    { tiltle: 'Mobile', link: '#' },
+    { tiltle: 'Electronics', link: '#' },
+    { tiltle: 'Customer service', link: '#' },
+    { tiltle: 'About', link: '#' },
   ];
 }

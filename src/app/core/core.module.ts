@@ -10,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { BookCardComponent } from './book-card/book-card.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
+import { BookListComponent } from './book-list/book-list.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SidebarComponent } from './sidebar/sidebar.component';
     BookCardComponent,
     MainComponent,
     SidebarComponent,
+    BookListComponent,
   ],
   imports: [CommonModule, FormsModule],
   exports: [

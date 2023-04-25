@@ -1,0 +1,5 @@
+<div class="card-cointainer">
+  <ng-container *ngFor="let book of bookList">
+    <app-book-card *ngIf="book.isFiltered" [card]="book"></app-book-card>
+  </ng-container>
+</div>
