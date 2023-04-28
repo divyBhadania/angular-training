@@ -1,0 +1,12 @@
+<p>child works!</p>
+
+<button (click)="isDIsplay = !isDIsplay">Change isDisplay</button>
+
+<ng-container *ngIf="isDIsplay; else elseTemplate">
+  ng-container is display
+</ng-container>
+
+<ng-template #elseTemplate>ng-template is display </ng-template>
+
+<div #viewChildObject>viewChild</div>
+<ng-content></ng-content>

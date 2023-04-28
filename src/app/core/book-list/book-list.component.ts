@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { IBook } from '../interface/IBookList';
-import { IAuthorFilter } from '../interface/IAuthorFilter';
+import { Subscription } from 'rxjs';
+import { FilterService } from '../services/filter/filter.service';
 
 @Component({
   selector: 'app-book-list',
   templateUrl: './book-list.component.html',
   styleUrls: ['./book-list.component.scss'],
 })
-export class BookListComponent {
+export class BookListComponent implements OnInit, OnDestroy {
   public bookList: IBook[] = [
     {
       title: "Harry Potter and the Philosopher's Stone",
@@ -51,17 +52,28 @@ export class BookListComponent {
     },
   ];
 
-  public updateFilter(authorfilter: IAuthorFilter[]) {
-    if (
-      authorfilter.filter((x) => x.check == false).length != authorfilter.length
-    ) {
-      authorfilter.forEach((element) => {
-        this.bookList
-          .filter((x) => x.author == element.name)
-          .forEach((b) => (b.isFiltered = element.check));
-      });
-    } else {
-      this.bookList.forEach((x) => (x.isFiltered = true));
-    }
+  private subscription: Subscription | undefined;
+
+  constructor(private filterService: FilterService) {}
+
+  ngOnInit(): void {
+    this.subscription = this.filterService.filterSubject$.subscribe(
+      (filter) => {
+        if (filter.filter((x) => x.check == false).length != filter.length) {
+          filter.forEach((element) => {
+            this.bookList
+              .filter((x) => x.author == element.name)
+              .forEach((b) => (b.isFiltered = element.check));
+          });
+        } else {
+          this.bookList.forEach((x) => (x.isFiltered = true));
+        }
+      }
+    );
+  }
+
+  ngOnDestroy(): void {
+    this.subscription?.unsubscribe();
+    this.subscription = undefined;
   }
 }

@@ -10,10 +10,16 @@ import { CoreModule } from './core/core.module';
 
 //service
 import { AlertService } from './common-error/alert.service';
+import { ComponentTaskModule } from './component-task/component-task.module';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, CoreModule, CommonErrorModuleModule],
+  imports: [
+    BrowserModule,
+    CoreModule,
+    CommonErrorModuleModule,
+    ComponentTaskModule,
+  ],
   providers: [AlertService],
   bootstrap: [AppComponent],
 })
